@@ -28,3 +28,6 @@ if (pairs) {
 } else {
     console.log('null');
 }
+for (let i = 0; i < numbersArray.length; i++) {
+            console.log(numbersArray[i]);
+}
