@@ -6,7 +6,6 @@ function range(start, end) {
     return result;
 }
 
-// Получаем ввод от пользователя
 let start = parseInt(prompt("Введите начало диапазона:"), 10);
 let end = parseInt(prompt("Введите конец диапазона:"), 10);
 

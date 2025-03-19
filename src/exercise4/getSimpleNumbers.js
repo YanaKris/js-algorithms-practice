@@ -26,7 +26,6 @@ function getSimpleNumbers(touple) {
     return primes;
 }
 
-// Запрашиваем у пользователя два числа через пробел
 let userInput = prompt("Введите два числа через пробел:");
 // Разбиваем строку на массив, преобразуем элементы в числа
 let [userStart, userEnd] = userInput.split(" ").map(num => parseInt(num, 10));

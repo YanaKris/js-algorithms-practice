@@ -29,7 +29,6 @@ function merge(left, right) {
     return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
 }
 
-// Пример использования:
 let numbers = [38, 27, 43, 3, 9, 82, 1, 12, 90, 13];
 console.log(mergeSort(numbers)); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 let numbers1 = [13, 45, 2, 11, 23, 17];

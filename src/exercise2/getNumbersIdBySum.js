@@ -15,7 +15,6 @@ function getNumbersIdBySum(numbers, targetSum) {
     return result.length > 0 ? result : null;
 }
 
-// Запрашиваем ввод у пользователя
 let userInput = prompt("Введите числа через пробел:");
 let numbersArray = userInput.split(" ").map(num => parseInt(num.trim(), 10));
 let userInput2 = parseInt(prompt("Введите сумму:"), 10);
