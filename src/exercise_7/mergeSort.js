@@ -1,32 +1,33 @@
 function mergeSort(arrayOfNumbers) {
-    if (arrayOfNumbers.length <= 1) {
-        return arrayOfNumbers; // Базовый случай: массив из 1 или 0 элементов уже отсортирован
-    }
+  if (arrayOfNumbers.length <= 1) {
+    return arrayOfNumbers; // Базовый случай: массив из 1 или 0 элементов уже отсортирован
+  }
 
-    let middle = Math.floor(arrayOfNumbers.length / 2); // Находим середину массива
-    let left = arrayOfNumbers.slice(0, middle); // Левая половина
-    let right = arrayOfNumbers.slice(middle); // Правая половина
+  let middle = Math.floor(arrayOfNumbers.length / 2); // Находим середину массива
+  let left = arrayOfNumbers.slice(0, middle); // Левая половина
+  let right = arrayOfNumbers.slice(middle); // Правая половина
 
-    return merge(mergeSort(left), mergeSort(right)); // Рекурсивно сортируем и объединяем
+  return merge(mergeSort(left), mergeSort(right)); // Рекурсивно сортируем и объединяем
 }
 
 function merge(left, right) {
-    let result = [];
-    let leftIndex = 0, rightIndex = 0;
+  let result = [];
+  let leftIndex = 0,
+    rightIndex = 0;
 
-    // Пока есть элементы в обеих частях, сравниваем и добавляем меньший
-    while (leftIndex < left.length && rightIndex < right.length) {
-        if (left[leftIndex] < right[rightIndex]) {
-            result.push(left[leftIndex]);
-            leftIndex++;
-        } else {
-            result.push(right[rightIndex]);
-            rightIndex++;
-        }
+  // Пока есть элементы в обеих частях, сравниваем и добавляем меньший
+  while (leftIndex < left.length && rightIndex < right.length) {
+    if (left[leftIndex] < right[rightIndex]) {
+      result.push(left[leftIndex]);
+      leftIndex++;
+    } else {
+      result.push(right[rightIndex]);
+      rightIndex++;
     }
+  }
 
-    // Добавляем оставшиеся элементы (если есть)
-    return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
+  // Добавляем оставшиеся элементы (если есть)
+  return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
 }
 
 let numbers = [38, 27, 43, 3, 9, 82, 1, 12, 90, 13];
